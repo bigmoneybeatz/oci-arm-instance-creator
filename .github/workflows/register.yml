@@ -28,7 +28,7 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.9'
+          python-version: '3.11'
 
       # 步驟 3：安裝所需的 Python 套件 (OCI SDK 和 requests)
       - name: Install dependencies
@@ -119,4 +119,4 @@ jobs:
           git pull
           git add stats.json || true
           git commit -m "📊 update dashboard stats [skip ci]" || echo "No changes to commit"
-          git push || echo "Push failed, maybe parallel run conflict"
+          git push || echo "Push failed, maybe parallel run conflict"
